@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+import { Geist, Geist_Mono } from "next/font/google";
+
+// import Cv from "./components/cvgenerator/Cv";
+import type { Metadata } from "next";
+
+{/* <link rel="preload" href="http://localhost:3000/_next/static/css/app/layout.css?v=1739403378659" as="style" />
+<link rel="preload" href="http://localhost:3000/_next/static/media/93f479601ee12b01-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" /> */}
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="flex-1">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+     
         {children}
       </body>
     </html>
